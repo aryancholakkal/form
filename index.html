@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Form</title>
 </head>
 <body>
@@ -12,27 +12,37 @@
         <p>Enter the details</p>
             <div>
                 <form action="/submit" method="post">
-                
-                 <label for="nameInput">Enter your name (minimum 3 characters):</label>
-                <input type="text" id="nameInput" name="nameInput" minlength="3" pattern="[A-Za-z\s]{3,}" required>
+                <ul>
+                    <li>
+                        <label for="nameInput">Enter your name:</label>
+                        <input type="text" id="nameInput" name="nameInput" minlength="3" pattern="[A-Za-z\s]{3,}" required>
+                        <br/>
+                        <br>   
+                    </li>    
+                    <li>
+                        <!-- Email input -->
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" autocomplete="on" required><br><br>
+                    </li>    
+                    
+                    <li>
+                        <!-- Telephone input -->
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" min="10" max="10" autocomplete="on"><br><br>
+                    </li>    
+                        
+                    <li>
+                        <!-- Date input -->
+                        <label for="birthday">Date of Birthday:</label>
+                        <input type="date" id="birthday" name="birthday" autocomplete="on"><br><br>
+                    </li>    
+                    <li>
+                        <label for="pwd">Password:</label>
+                        <input type="password" id="pwd" name="pwd" > <br><br>
+                    </li>    
+                    
+                </ul>
                    
-                
-                <!-- Email input -->
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" autocomplete="on" required><br><br>
-            
-                <!-- Telephone input -->
-                <label for="phone">Phone:</label><br>
-                <input type="tel" id="phone" name="phone" min="10" max="10" autocomplete="on"><br><br>
-                
-            
-                <!-- Date input -->
-                <label for="birthday">Date of Birthday:</label><br>
-                <input type="date" id="birthday" name="birthday" autocomplete="on"><br><br>
-
-                <label for="pwd">Password:</label>
-                <input type="password" id="pwd" name="pwd" > <br><br>
-
                 <!-- Submit button -->
                 <input type="submit" value="Submit">
             </form>
